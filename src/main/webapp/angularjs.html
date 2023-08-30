@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Event Organizing Portal</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;0,800;1,400;1,500;1,700&display=swap"
+		rel="stylesheet">
+	<style>
+		body {
+			font-family: Arial;
+			padding: 90px 0;
+			text-align: center;
+			background-image: url("border.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: top;
+		}
+
+		table {
+			border-collapse: collapse;
+			align-items: center;
+			margin-left: 350px;
+			margin-top: 40px;
+			border: 2px solid #fff;
+			background-color: #f98acb;
+		}
+
+		td {
+			border: 2px solid #fff;
+			padding: 5px;
+		}
+
+		th {
+			border: 2px solid #fff;
+			padding: 5px;
+			text-align: center;
+		}
+
+		.nav {
+			overflow: hidden;
+			/* background-color: #ff0066;*/
+			text-align: center;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			margin-bottom: 10px;
+			margin-top: 10px;
+		}
+
+		h2 {
+			font-family: "Brush Script MT", cursive;
+			font-size: 45px;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 600;
+			line-height: 26.4px;
+			text-align: center;
+			margin-left: 350px;
+			font-weight: bold;
+		}
+
+		input[type="text"] {
+			width: 22%;
+			border: none;
+			border-bottom: .5px solid #000;
+			outline: none;
+			height: 20px;
+			color: #000;
+			font-size: 15px;
+		}
+
+		span {
+			font-weight: bold;
+			font-size: 20px;
+		}
+
+		p {
+			font-weight: bold;
+			font-size: 30px;/
+		}
+
+		.filter-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+
+		.filter-label {
+			font-size: 22px;
+			font-weight: bold;
+			margin-right: 10px;
+			color: #ff0066;
+		}
+
+		.filter-input {
+			width: 400px;
+			border: 15px;
+			border-radius: 10px;
+			outline: auto;
+			height: 35px;
+			color: #141313;
+			font-size: 18px;
+			padding-left: 0px;
+			transition: border-color 0.3s ease-in-out;
+		}
+
+		.filter-input:focus {
+			border-color: #ff0066;
+		}
+
+		.search-button {
+			background-color: #ff0066;
+			color: #fff;
+			border: none;
+			padding: 8px 16px;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+
+		.search-button:hover {
+			background-color: #e6005c;
+		}
+
+		/* Beautiful animated search icon */
+		.search-icon-container {
+			position: relative;
+		}
+
+		.search-icon {
+			position: absolute;
+			top: 12px;
+			right: 8px;
+			opacity: 0.6;
+			pointer-events: none;
+			transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+		}
+
+		/* .filter-input:focus + .search-icon-container .search-icon,
+        .filter-input:not(:placeholder-shown) + .search-icon-container .search-icon {
+            opacity: 1;
+            transform: translateY(-2px) scale(1.1);
+        }*/
+	</style>
+</head>
+
+<body ng-app="myModule">
+	<div class="nav">
+		<h2>Wedding Planner - Event Organizing Portal</h2>
+	</div>
+	<div ng-controller="myController">
+		<div class="filter-container">
+			<span><label class="filter-label">Find Your Dream Design:</label></span>
+			<input type="text" ng-model="searchDesign" class="filter-input" placeholder="Search by design"
+				style="background-color:rgba(234, 255, 0, 0.759)" />
+			<button class="search-button" ng-click="search()">Search</button>
+		</div>
+		<p>Wedding Decorations & Venues</p>
+		<table>
+			<thead>
+				<tr>
+					<th>S.No</th>
+					<th>Design</th>
+					<th>Decoration Type</th>
+					<th>Venue</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in weddingItems | filter:searchDesign">
+					<td>{{ item.sno }}</td>
+					<td>{{ item.design }}</td>
+					<td>{{ item.decorationType }}</td>
+					<td>{{ item.venue }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script>
+		var app = angular
+			.module("myModule", [])
+			.controller("myController", function ($scope) {
+				var weddingItems = [
+					{
+						sno: 1,
+						design: "Classic Elegance",
+						decorationType: "Floral",
+						venue: "Grand Hotel Ballroom"
+					},
+					{
+						sno: 2,
+						design: "Rustic Chic",
+						decorationType: "Vintage",
+						venue: "Barn at the Farm"
+					},
+					{
+						sno: 3,
+						design: "Garden Romance",
+						decorationType: "Outdoor",
+						venue: "Botanical Gardens"
+					},
+					{
+						sno: 4,
+						design: "Modern Glam",
+						decorationType: "Luxury",
+						venue: "Five-Star Hotel Banquet Hall"
+					},
+					{
+						sno: 5,
+						design: "Beach Bliss",
+						decorationType: "Beachy",
+						venue: "Seaside Resort"
+					},
+					{
+						sno: 6,
+						design: "Fairytale Castle",
+						decorationType: "Royal",
+						venue: "Historic Castle"
+					},
+					{
+						sno: 7,
+						design: "Bohemian Dream",
+						decorationType: "Boho",
+						venue: "Open Air Field"
+					},
+					{
+						sno: 8,
+						design: "Whimsical Wonderland",
+						decorationType: "Creative",
+						venue: "Art Gallery"
+					},
+					{
+						sno: 9,
+						design: "Enchanted Forest",
+						decorationType: "Nature",
+						venue: "Forest Lodge"
+					},
+					{
+						sno: 10,
+						design: "Tropical Paradise",
+						decorationType: "Exotic",
+						venue: "Beachfront Resort"
+					},
+				];
+
+				$scope.weddingItems = weddingItems;
+			});
+	</script>
+</body>
+
+</html>

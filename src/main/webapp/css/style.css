@@ -1,0 +1,305 @@
+   body,
+   ul {
+
+   	margin: 0;
+
+   	padding: 0;
+
+   }
+
+   body {
+
+   	font-family: 'Times New Roman', Times, serif;
+
+   }
+
+   #banner {
+
+   	color: #fff;
+
+   	padding: 150px 0;
+
+   	background-image: url("https://govindaresorts.com/wp-content/uploads/Lonavala-best-wedding-destination-768x511.png");
+
+   	background-repeat: no-repeat;
+
+   	background-size: cover;
+
+   }
+
+   #banner h1 {
+
+   	font-family: "Brush Script MT", cursive;
+   	font-size: 45px;
+   	font-style: normal;
+   	font-variant: normal;
+   	font-weight: 700;
+   	line-height: 26.4px;
+
+   }
+
+   .header {
+
+   	color: #fff;
+
+   	padding: 20px;
+
+   }
+
+   .header nav {
+
+   	position: absolute;
+
+   	top: 26px;
+
+   	right: 100px;
+
+   	float: right;
+
+   }
+
+   .header h1 {
+
+   	font-size: 32px;
+
+   	position: absolute;
+
+   	top: 12px;
+
+   	left: 30px;
+
+   	float: left;
+
+   	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+   }
+
+   .header nav ul li {
+
+   	display: inline;
+
+   	margin-right: 10px;
+
+   }
+
+   .header nav ul li a {
+
+   	text-decoration: none;
+
+   	color: #fff;
+
+   	font-family: sans-serif;
+
+   	font-weight: bold;
+
+   	margin: 0 10px;
+
+   	line-height: 60px;
+
+   	text-transform: uppercase;
+
+   }
+
+   .dropdown {
+
+   	position: relative;
+
+   	display: inline-block;
+
+   }
+
+
+
+   .dropdown-content {
+
+   	display: none;
+
+   	position: absolute;
+
+   	background-color: #1110109e;
+
+   	min-width: 160px;
+
+   	color: #fff;
+
+   	box-shadow: 0px 8px 16px 0px rgba(232, 15, 15, 0.176);
+
+   	padding: 12px 16px;
+
+   	z-index: 1;
+
+   }
+
+
+
+   .dropdown:hover .dropdown-content {
+
+   	display: block;
+
+   }
+
+   .text {
+
+   	text-align: center;
+
+   }
+
+   .text h2 {
+
+   	font-family: "Brush Script MT", cursive;
+   	font-size: 45px;
+   	font-style: normal;
+   	font-variant: normal;
+   	font-weight: 700;
+   	line-height: 26.4px;
+
+   	font-size: 45px;
+
+   	margin-bottom: 20px;
+
+   }
+
+   .btn {
+
+   	display: inline-block;
+
+   	padding: 10px 20px;
+
+   	background-color: #333;
+
+   	color: #fff;
+
+   	font-size: large;
+
+   	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+   	text-decoration: none;
+
+   	border-radius: 5px;
+
+   }
+
+   h2 {
+
+   	text-align: center;
+
+   	padding: 30px;
+
+   }
+
+   .imagewrapper {
+
+   	text-align: center;
+
+   	display: flex;
+
+   	padding: 60px;
+
+   }
+
+   #services {
+
+   	background-color: #f90286;
+
+   	background-size: 50px 50px;
+
+   }
+
+   .imagecontainer {
+
+   	text-align: center;
+
+   	display: flex;
+
+   	padding: 40px;
+
+   }
+
+   .events {
+
+   	margin-left: 55px;
+
+   	font-family: "Brush Script MT", cursive;
+   	font-style: normal;
+   	font-variant: normal;
+
+   }
+
+   .events img {
+
+   	width: 200px;
+
+   	height: 200px;
+
+   	border-radius: 45%;
+
+   	margin-left: 20px;
+
+   }
+
+   .events p {
+
+   	margin-top: 10px;
+
+   	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+   	font-size: 18px;
+
+   	text-align: justify;
+
+   }
+
+   #services h2 {
+
+   	font-size: 45px;
+
+   }
+
+   .service {
+
+   	margin-left: 25px;
+
+   	font-family: "Brush Script MT", cursive;
+   	font-style: normal;
+   	font-variant: normal;
+
+   }
+
+   .service img {
+
+   	width: 300px;
+
+   	height: 200px;
+
+   	border-radius: 0%;
+
+   }
+
+   .service h3 {
+
+   	color: #050000d8;
+
+   	font-size: 25px;
+
+   	margin-top: 10px;
+
+   }
+
+   .service p {
+
+   	color: #fff;
+
+   	font-size: 20px;
+
+   	text-align: justify;
+
+   }
+
+   footer {
+
+   	background-color: #333;
+
+   	color: #fff;
+
+   	padding: 20
+   }
