@@ -1,303 +1,305 @@
-   body, ul {
+   body,
+   ul {
 
-        margin: 0;
+   	margin: 0;
 
-        padding: 0;
+   	padding: 0;
 
-    }
+   }
 
-    body {
+   body {
 
-        font-family:'Times New Roman', Times, serif;
+   	font-family: 'Times New Roman', Times, serif;
 
-    }
+   }
 
-    #banner {
+   #banner {
 
-        color: #fff;
+   	color: #fff;
 
-        padding: 150px 0;
+   	padding: 150px 0;
 
-        background-image: url("https://govindaresorts.com/wp-content/uploads/Lonavala-best-wedding-destination-768x511.png");
+   	background-image: url("https://govindaresorts.com/wp-content/uploads/Lonavala-best-wedding-destination-768x511.png");
 
-        background-repeat: no-repeat;
+   	background-repeat: no-repeat;
 
-        background-size: cover;
+   	background-size: cover;
 
-    }
+   }
 
-    #banner h1
+   #banner h1 {
 
-    {
+   	font-family: "Brush Script MT", cursive;
+   	font-size: 45px;
+   	font-style: normal;
+   	font-variant: normal;
+   	font-weight: 700;
+   	line-height: 26.4px;
 
-        font-family: "Brush Script MT", cursive; font-size: 45px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+   }
 
-    }
+   .header {
 
-    .header {
+   	color: #fff;
 
-        color: #fff;
+   	padding: 20px;
 
-        padding: 20px;
+   }
 
-    }
+   .header nav {
 
-    .header nav{
+   	position: absolute;
 
-        position: absolute;
+   	top: 26px;
 
-        top:26px;
+   	right: 100px;
 
-        right: 100px;
+   	float: right;
 
-        float:right;
+   }
 
-        }
+   .header h1 {
 
-    .header h1{
+   	font-size: 32px;
 
-        font-size: 32px;
+   	position: absolute;
 
-        position: absolute;
+   	top: 12px;
 
-        top: 12px;
+   	left: 30px;
 
-        left: 30px;
+   	float: left;
 
-        float:left;
+   	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   }
 
-    }
+   .header nav ul li {
 
-    .header nav ul li {
+   	display: inline;
 
-        display: inline;
+   	margin-right: 10px;
 
-        margin-right: 10px;
+   }
 
-    }
+   .header nav ul li a {
 
-    .header nav ul li a {
+   	text-decoration: none;
 
-        text-decoration: none;
+   	color: #fff;
 
-        color:#fff;
+   	font-family: sans-serif;
 
-        font-family:sans-serif;
+   	font-weight: bold;
 
-        font-weight:bold;
+   	margin: 0 10px;
 
-        margin:0 10px;
+   	line-height: 60px;
 
-        line-height:60px;
+   	text-transform: uppercase;
 
-        text-transform:uppercase;
+   }
 
-    }
+   .dropdown {
 
-    .dropdown {
+   	position: relative;
 
-        position: relative;
+   	display: inline-block;
 
-        display: inline-block;
+   }
 
-      }
 
-      
 
-    .dropdown-content {
+   .dropdown-content {
 
-        display: none;
+   	display: none;
 
-        position: absolute;
+   	position: absolute;
 
-        background-color: #1110109e;
+   	background-color: #1110109e;
 
-        min-width: 160px;
+   	min-width: 160px;
 
-        color:#fff;
+   	color: #fff;
 
-        box-shadow: 0px 8px 16px 0px rgba(232, 15, 15, 0.176);
+   	box-shadow: 0px 8px 16px 0px rgba(232, 15, 15, 0.176);
 
-        padding: 12px 16px;
+   	padding: 12px 16px;
 
-        z-index: 1;
+   	z-index: 1;
 
-      }
+   }
 
-      
 
-    .dropdown:hover .dropdown-content{
 
-        display: block;
+   .dropdown:hover .dropdown-content {
 
-      }
+   	display: block;
 
-    .text
+   }
 
-    {
+   .text {
 
-        text-align: center;
+   	text-align: center;
 
-    }
+   }
 
-    .text h2 {
+   .text h2 {
 
-        font-family:"Brush Script MT", cursive; font-size: 45px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+   	font-family: "Brush Script MT", cursive;
+   	font-size: 45px;
+   	font-style: normal;
+   	font-variant: normal;
+   	font-weight: 700;
+   	line-height: 26.4px;
 
-        font-size:45px;
+   	font-size: 45px;
 
-        margin-bottom: 20px;
+   	margin-bottom: 20px;
 
-    }
+   }
 
-    .btn {
+   .btn {
 
-        display: inline-block;
+   	display: inline-block;
 
-        padding: 10px 20px;
+   	padding: 10px 20px;
 
-        background-color: #333;
+   	background-color: #333;
 
-        color: #fff;
+   	color: #fff;
 
-        font-size:large;
+   	font-size: large;
 
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
-        text-decoration: none;
+   	text-decoration: none;
 
-        border-radius: 5px;
+   	border-radius: 5px;
 
-    }
+   }
 
-    h2{
+   h2 {
 
-        text-align: center;
+   	text-align: center;
 
-        padding:30px;
+   	padding: 30px;
 
-    }
+   }
 
-    .imagewrapper
+   .imagewrapper {
 
-    {
+   	text-align: center;
 
-        text-align: center;
+   	display: flex;
 
-        display: flex;
+   	padding: 60px;
 
-        padding: 60px;
+   }
 
-    }
+   #services {
 
-    #services
+   	background-color: #f90286;
 
-    {
+   	background-size: 50px 50px;
 
-        background-color:#f90286;
+   }
 
-        background-size:50px 50px;
+   .imagecontainer {
 
-    }
+   	text-align: center;
 
-    .imagecontainer
+   	display: flex;
 
-    {
+   	padding: 40px;
 
-        text-align: center;
+   }
 
-        display:flex;
+   .events {
 
-        padding: 40px;
+   	margin-left: 55px;
 
-    }
+   	font-family: "Brush Script MT", cursive;
+   	font-style: normal;
+   	font-variant: normal;
 
-    .events{
+   }
 
-        margin-left:55px;
+   .events img {
 
-        font-family:"Brush Script MT", cursive; font-style: normal; font-variant: normal;
+   	width: 200px;
 
-    }
+   	height: 200px;
 
-    .events img {
+   	border-radius: 45%;
 
-        width: 200px;
+   	margin-left: 20px;
 
-        height: 200px;
+   }
 
-        border-radius:45%;
+   .events p {
 
-        margin-left: 20px;
+   	margin-top: 10px;
 
-    }
+   	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
-    .events p{
+   	font-size: 18px;
 
-        margin-top: 10px;
+   	text-align: justify;
 
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   }
 
-        font-size: 18px;
+   #services h2 {
 
-        text-align: justify;
+   	font-size: 45px;
 
-    }
+   }
 
-    #services h2{
+   .service {
 
-        font-size:45px;
+   	margin-left: 25px;
 
-    }
+   	font-family: "Brush Script MT", cursive;
+   	font-style: normal;
+   	font-variant: normal;
 
-    .service {
+   }
 
-        margin-left:25px;
+   .service img {
 
-        font-family:"Brush Script MT", cursive; font-style: normal; font-variant: normal;
+   	width: 300px;
 
-    }
+   	height: 200px;
 
-    .service img {
+   	border-radius: 0%;
 
-        width:300px;
+   }
 
-        height:200px;
+   .service h3 {
 
-        border-radius:0%;
+   	color: #050000d8;
 
-    }
+   	font-size: 25px;
 
-    .service h3
+   	margin-top: 10px;
 
-    {
+   }
 
-        color:#050000d8;
+   .service p {
 
-        font-size: 25px;
+   	color: #fff;
 
-        margin-top: 10px;
+   	font-size: 20px;
 
-    }
+   	text-align: justify;
 
-    .service p{
+   }
 
-        color: #fff;
+   footer {
 
-        font-size: 20px;
+   	background-color: #333;
 
-        text-align: justify;
+   	color: #fff;
 
-    }
-
-    footer{
-
-        background-color: #333;
-
-        color: #fff;
-
-        padding: 20 
-
-    }
+   	padding: 20
+   }

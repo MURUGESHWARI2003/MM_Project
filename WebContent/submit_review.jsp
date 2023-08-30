@@ -5,9 +5,9 @@
     String review = request.getParameter("review");
     
     // Database connection parameters
-    String jdbcURL = "jdbc:mysql://localhost:3307/events";
+    String jdbcURL = "jdbc:mysql://localhost:3306/events";
     String dbUser = "root";
-    String dbPassword = "12345";
+    String dbPassword = "Amu@2023";
     
     try {
         Class.forName("com.mysql.jdbc.Driver");

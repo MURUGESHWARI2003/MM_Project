@@ -1,419 +1,115 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-
-  <title>Registration Form</title>
-
-  <script>
-
-    function validateForm() {
-
-  // Name validation
-
-  var name = document.getElementById ("name").value;
-
-  if (name === "") {
-
-    alert("Please enter your name.");
-
-    return false;
-
-  }
-
-
-
-  // Event selection validation
-
-  var eventSelection = document.getElementsByName("event");
-
-  var eventChecked = false;
-
-  for (var i = 0; i < eventSelection.length; i++) {
-
-    if (eventSelection[i].checked) {
-
-      eventChecked = true;
-
-      break;
-
-    }
-
-  }
-
-  if (!eventChecked) {
-
-    alert("Please select at least one event.");
-
-    return false;
-
-  }
-
-
-
-  // Gender validation
-
-  var genderInputs = document.getElementsByName("gender");
-
-  var isGenderSelected = false;
-
-
-
-  for (var i = 0; i < genderInputs.length; i++) {
-
-    if (genderInputs[i].checked) {
-
-      isGenderSelected = true;
-
-      break;
-
-    }
-
-  }
-
-
-
-  if (!isGenderSelected) {
-
-    var genderLabel = document.querySelector('label[for="male"]');
-
-    genderLabel.classList.add("error");
-
-    alert("Please select a gender option.");
-
-    return false;
-
-  } else {
-
-    var genderLabels = document.querySelectorAll('label[for^="gender"]');
-
-    for (var i = 0; i < genderLabels.length; i++) {
-
-      genderLabels[i].classList.remove("error");
-
-    }
-
-  }
-
-
-
-  // Email validation
-
-  var email = document.getElementById("email").value;
-
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!emailRegex.test(email)) {
-
-    alert("Please enter a valid email address.");
-
-    return false;
-
-  }
-
-
-
-  // Address validation
-
-  var address = document.getElementById("address").value;
-
-  if (address === "") {
-
-    alert("Please enter your address.");
-
-    return false;
-
-  }
-
-
-
-  // Country validation
-
-  var country = document.getElementById("country").value;
-
-  if (country === "") {
-
-    alert("Please select your country.");
-
-    return false;
-
-  }
-
-
-
-  // State validation
-
-  var state = document.getElementById("state").value;
-
-  if (state === "") {
-
-    alert("Please select your state.");
-
-    return false;
-
-  }
-
-
-
-  // Phone number validation
-
-  var phoneNumber = document.getElementById("phone").value;
-
-  var phoneRegex = /^\d{10}$/;
-
-  if (!phoneRegex.test(phoneNumber)) {
-
-    alert("Please enter a valid 10-digit phone number.");
-
-    return false;
-
-  }
-
-   alert("Registration successful!");
-
-  return true; // Form submission allowed
-
-}
-
-
-
-</script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
 <style>
-
-  body {
-
+ body {
     color:aquamarine;
-
-    background-image: url("https://img.freepik.com/premium-photo/elegant-floral-wedding-backdrop-wallpaper_756748-2486.jpg");
-
+    background-image: url("https://i.makeagif.com/media/6-16-2018/j8SSfR.gif");
     background-size:cover;
-
     background-repeat: no-repeat;
-
+    width:412px 914px;
   }
-
-
-
 .container {
-
-  width: 400px;
-
+  /*width:100% 100%;
   margin: 0 auto;
-
-  padding: 20px;
-
+  padding: 20px;*/
   border: 1px solid #ccc;
-
   border-radius: 5px;
-
 }
-
-
-
 h1 {
-
   text-align: center;
-
   color:azure;
-
   font-size:xx-large;
-
 }
-
-
-
 label {
-
   color:rgb(246, 6, 218);
-
   font-weight: bold;
-
   font-size:larger;
-
   margin-bottom: 10px;
-
 }
-
-input[type="text"],
-
-input[type="password"],
-
-input[type="email"],
-
-select{
-
-  padding: 5px;
-
-  margin-bottom: 10px;
-
-  border-radius: 3px;
-
-  border: 1px solid #ccc;
-
-}
-
-#address {
-
-  width: 200px; /* Set an initial width for the address field */
-
-  resize: horizontal; /* Allow vertical resizing */
-
-}
-
-.checkboxes
-
-{
-
-  display:flexbox;
-
-}
-
-.checkboxes input[type="checkbox"]
-
-{
-
-  margin-right: 10px;
-
-}
-
-input[type="tel"]
-
-{
-
-padding:5px;
-
-  border: 1px solid #ccc;
-
-  border-radius: 4px;
-
-  box-sizing: border-box;
-
-}
-
 input[type="submit"] {
-
   padding: 10px 20px;
-
   background-color: #4CAF50;
-
   color: #fff;
-
   border: none;
-
   border-radius: 3px;
-
   cursor: pointer;
-
 }
-
 input[type="submit"]:hover {
-
   background-color: #45a049;
-
 }
-
+input[type="tel"]
+{
+padding:5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#address {
+  width: 200px; /* Set an initial width for the address field */
+  resize: horizontal; /* Allow vertical resizing */
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select{
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
 </style>
-
 </head>
-
 <body>
-
-  <div class="container">
-
-    <h1>Registration Form</h1>
-
-    <form action="RegistrationServlet" method="post" onsubmit="return validateForm()">
-
-      <label for="name">Name:</label>
-
-      <input type="text" id="name" required><br>
-
-      <div class="checkboxes">
-
-      <label for="event">Event Selection:</label><br>
-
-      <input type="checkbox" name="event" value="event1">Wedding
-
-      <input type="checkbox" name="event" value="event2">Birthday<br>
-
-      <input type="checkbox" name="event" value="event3">Conferences
-
-      <input type="checkbox" name="event" value="event4">Musical Concert<br><br>
-
+    <header>
+        <h1>Event Registration Form</h1>
+    </header>
+    <div class="container">
+        <form action="RegistrationServlet" method="post" id="registrationForm" >
+            <label for="eventName">Select Event Type:</label><br>
+            <input type="radio" id="wedding" name="event" value="weddingpage">
+            <label for="wedding">Wedding</label><br>
+            <input type="radio" id="birthday" name="event" value="Birthday">
+            <label for="birthday">Birthday</label><br>
+            <input type="radio" id="corporate" name="event" value="corporate">
+            <label for="corporate">Corporate</label><br><br>
+            
+            <label for="customerName">Your Name:</label>
+            <input type="text" id="customerName" name="name" required><br>
+            <small class="error" id="nameError">Name is required.</small><br><br>
+            
+            <label for="customerEmail">Your Email:</label>
+            <input type="email" id="customerEmail" name="email" required><br>
+            <small class="error" id="emailError">Valid email is required.</small><br><br>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            
+            <label for="place">Place:</label>
+            <input type="text" id="place" name="place" required><br>
+            <small class="error" id="placeError">Place is required.</small><br><br>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br>
+            <small class="error" id="addressError">Address is required.</small><br><br>
+            
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required><br>
+            <small class="error" id="cityError">City is required.</small><br><br>
+            
+            <label for="phone">Phone Number:</label>
+			<input type="tel" id="phone" name="phone"><br><br>
+			<small class="error" id="Phone _noError">Phone number is required.</small><br><br>
+            
+            <button type="submit">Register</button>
+        </form>
     </div>
-
-      <label for="gender">Gender:</label>
-
-      <input type="radio" id="male" name="gender" value="male">
-
-      <label for="male">Male</label>
-
-      <input type="radio" id="female" name="gender" value="female">
-
-      <label for="female">Female</label><br><br>
-
-
-
-      <label for="email">Email ID:</label>
-
-      <input type="email" id="email" required><br>
-
-
-
-      <label for="address">Address:</label><br>
-
-      <textarea id="address" rows="3" placeholder="Enter your Address" required></textarea><br><br>
-
-      <!--<input type="text" id="address" required><br><br>-->
-
-
-
-      <label for="country">Country:</label>
-
-      <select id="country" required>
-
-          <option value="">Select Country</option>
-
-          <option value="usa">USA</option>
-
-          <option value="canada">Canada</option>
-
-          <!-- Add more country options here -->
-
-      </select><br><br>
-
-
-
-      <label for="state">State:</label>
-
-      <select id="state" required>
-
-          <option value="">Select State</option>
-
-          <option value="ny">New York</option>
-
-          <option value="ca">California</option>
-
-          <!-- Add more state options here -->
-
-      </select><br>
-
-
-
-      <label for="phone">Phone Number:</label>
-
-      <input type="tel" id="phone"><br><br>
-
-
-
-      <input type="submit" value="Submit">
-
-    </form>
-
-  </div>
-
 </body>
-
 </html>
